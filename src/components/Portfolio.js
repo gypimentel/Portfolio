@@ -5,7 +5,6 @@ const Portfolio = () => {
   const skills = [
     "JavaScript",
     "React",
-    "TypeScript",
     "Node.js",
     "Python",
     "Java",
@@ -14,7 +13,6 @@ const Portfolio = () => {
     "SQL",
     "C++",
     "Linux",
-    "Docker",
   ]
 
   const projects = [
@@ -50,7 +48,7 @@ const Portfolio = () => {
       <header className="header">
         <nav className="nav">
           <div className="nav-container">
-            <h1 className="logo">John Doe</h1>
+            <h1 className="logo">Guian Karlo Pimentel</h1>
             <div className="nav-links">
               <a href="#about">About</a>
               <a href="#skills">Skills</a>
@@ -65,9 +63,9 @@ const Portfolio = () => {
       <section className="hero">
         <div className="hero-content">
           <div className="avatar">
-            <span>JD</span>
+            <span>GKP</span>
           </div>
-          <h1 className="hero-title">John Doe</h1>
+          <h1 className="hero-title">Guian Karlo Pimentel</h1>
           <p className="hero-subtitle">Computer Engineering Student</p>
           <p className="hero-description">
             Passionate about building innovative software solutions and exploring the intersection of hardware and
@@ -92,9 +90,8 @@ const Portfolio = () => {
           <h2 className="section-title">About Me</h2>
           <div className="card">
             <p className="about-text">
-              I'm a dedicated Computer Engineering student with a passion for creating innovative solutions that bridge
-              the gap between hardware and software. My journey in technology has led me to develop expertise in both
-              low-level system programming and modern web development.
+              I'm a fourth year BS Computer Engineering student from TIP Manila. This is an attempt to create a simple 
+              website that showcases my portfolio and serve as a CV. This is created using React and templates from Lucide.
             </p>
             <p className="about-text">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
@@ -193,7 +190,7 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>© 2024 John Doe. Built with React and lots of ☕</p>
+          <p>© 2025 Guian Karlo Pimentel. Built with React and lots of ☕</p>
         </div>
       </footer>
     </div>
