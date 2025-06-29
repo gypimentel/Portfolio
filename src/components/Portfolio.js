@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink } from "lucide-react"
+import { Mail, Phone, MapPin, Github, ExternalLink, Facebook } from "lucide-react"
 import "./Portfolio.css"
 
 const Portfolio = () => {
@@ -17,29 +17,32 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "E-commerce Web App",
+      title: "Sales and Inventory System",
       description:
-        "A full-stack e-commerce application built with React and Node.js, featuring user authentication, product catalog, and payment integration.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+        "Web application created using Node.js, Express.js, and MySQL to serve as point-of-sale system for a small sari-sari store",
+      technologies: ["Express.js", "Node.js", "MySQL", "HTML/CSS"],
       github: "#",
       demo: "#",
-    },
+    }
+  ]
+
+  const experiences = [
     {
-      title: "Task Management System",
-      description:
-        "A collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      technologies: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Weather Dashboard",
-      description:
-        "A responsive weather application that displays current conditions and forecasts using external APIs with interactive charts.",
-      technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
-      github: "#",
-      demo: "#",
-    },
+      position:"Customer and Sales Representative",
+      duration:"August, 2015 - August, 2016",
+      accounts: "DirecTV and AT&T",
+      company: "IBEX Global Paranaque"
+    },{
+      position:"Customer Service Email Support",
+      duration:"February, 2017 - June, 2018",
+      accounts: "Lyft",
+      company: "IBEX Global Paranaque"
+    },{
+      position:"Technical Support",
+      duration:"November, 2018 - Present",
+      accounts: "APCL",
+      company: "Conduent Business Inc."
+    }
   ]
 
   return (
@@ -53,6 +56,7 @@ const Portfolio = () => {
               <a href="#about">About</a>
               <a href="#skills">Skills</a>
               <a href="#projects">Projects</a>
+              <a href="#experience">Experiences</a>
               <a href="#contact">Contact</a>
             </div>
           </div>
@@ -74,11 +78,19 @@ const Portfolio = () => {
           <div className="hero-buttons">
             <button className="btn btn-primary">
               <Mail size={16} />
-              Contact Me
+              <a href="mailto:mgkpimentel@tip.edu.ph">
+                Contact me
+              </a>
             </button>
             <button className="btn btn-secondary">
               <Github size={16} />
+              <a 
+                href="https://github.com/gypimentel"
+                target="_blank"
+                rel="noreferrer"
+              >
               GitHub
+              </a>
             </button>
           </div>
         </div>
@@ -91,7 +103,7 @@ const Portfolio = () => {
           <div className="card">
             <p className="about-text">
               I'm a fourth year BS Computer Engineering student from TIP Manila. This is an attempt to create a simple 
-              website that showcases my portfolio and serve as a CV. This is created using React and templates from Lucide.
+              website that showcases my portfolio and serve as a CV. This is created using React and icons from Lucide.
             </p>
             <p className="about-text">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
@@ -150,6 +162,25 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section id="experience" className="section">
+        <div className="container">
+          <h2 className="section-title">Work Experience</h2>
+          <div className="experience-grid">
+            {experiences.map((exp, index) => (
+              <div key={index} className="experience-card">
+                <div className="experience-content">
+                  <h3 className="experience-title">{exp.position}</h3>
+                  <p className="experience-details">{exp.duration}</p>
+                  <p className="experience-details">{exp.accounts}</p>
+                  <p className="experience-details">{exp.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="section">
         <div className="container">
@@ -162,25 +193,37 @@ const Portfolio = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <Mail size={20} />
-                <span>john.doe@email.com</span>
+                <span>mgkpimentel@tip.edu.ph</span>
               </div>
               <div className="contact-item">
                 <Phone size={20} />
-                <span>+1 (555) 123-4567</span>
+                <span>+63 936 456 7890</span>
               </div>
               <div className="contact-item">
                 <MapPin size={20} />
-                <span>Your City, State</span>
+                <span>Manila, Philippines</span>
               </div>
             </div>
             <div className="social-buttons">
               <button className="btn btn-outline">
                 <Github size={16} />
-                GitHub
+                <a 
+                  href="https://github.com/gypimentel"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
               </button>
               <button className="btn btn-outline">
-                <Linkedin size={16} />
-                LinkedIn
+                <Facebook size={16} />
+                <a 
+                  href="https://www.facebook.com/guiankarlo.pimentel"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Facebook
+                </a>
               </button>
             </div>
           </div>

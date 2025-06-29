@@ -259,6 +259,53 @@
   display: flex;
   gap: 0.5rem;
 }
+/* Optional timeline effect */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+
+.experience-card {
+  position: relative;
+  background: white;
+  border-left: 4px solid #3b82f6; /* blue timeline line */
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: -0.65rem;
+  width: 12px;
+  height: 12px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px white;
+}
+
+.experience-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.experience-details {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
 
 /* Contact Section */
 .contact-card {
