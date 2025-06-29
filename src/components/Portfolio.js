@@ -79,7 +79,7 @@ const Portfolio = () => {
             <button className="btn btn-primary">
               <Mail size={16} />
               <a href="mailto:mgkpimentel@tip.edu.ph">
-                Contact me
+                Contact Me
               </a>
             </button>
             <button className="btn btn-secondary">
