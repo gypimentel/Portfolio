@@ -21,7 +21,7 @@ const Portfolio = () => {
       description:
         "Web application created using Node.js, Express.js, and MySQL to serve as point-of-sale system for a small sari-sari store",
       technologies: ["Express.js", "Node.js", "MySQL", "HTML/CSS"],
-      github: "#",
+      github: "https://github.com/gypimentel/CPE205---Final-Project",
       demo: "#",
     }
   ]
@@ -148,12 +148,24 @@ const Portfolio = () => {
                 </div>
                 <div className="project-buttons">
                   <button className="btn btn-outline">
+                    <a 
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                     <Github size={16} />
                     Code
+                    </a>
                   </button>
                   <button className="btn btn-outline">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                     <ExternalLink size={16} />
                     Demo
+                    </a>
                   </button>
                 </div>
               </div>
