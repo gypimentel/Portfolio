@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, ExternalLink, Facebook } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Facebook } from "lucide-react"
 import "./Portfolio.css"
 
 const Portfolio = () => {
@@ -13,17 +13,6 @@ const Portfolio = () => {
     "SQL",
     "C++",
     "Linux",
-  ]
-
-  const projects = [
-    {
-      title: "Sales and Inventory System",
-      description:
-        "Web application created using Node.js, Express.js, and MySQL to serve as point-of-sale system for a small sari-sari store",
-      technologies: ["Express.js", "Node.js", "MySQL", "HTML/CSS"],
-      github: "https://github.com/gypimentel/CPE205---Final-Project",
-      demo: "#",
-    }
   ]
 
   const experiences = [
@@ -55,8 +44,7 @@ const Portfolio = () => {
             <div className="nav-links">
               <a href="#about">About</a>
               <a href="#skills">Skills</a>
-              <a href="#projects">Projects</a>
-              <a href="#experience">Experiences</a>
+              <a href="#experience">Work</a>
               <a href="#contact">Contact</a>
             </div>
           </div>
@@ -130,63 +118,19 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="section">
-        <div className="container">
-          <h2 className="section-title">Featured Projects</h2>
-          <div className="projects-grid">
-            {projects.map((project, index) => (
-              <div key={index} className="project-card">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="project-technologies">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="tech-badge">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="project-buttons">
-                  <button className="btn btn-outline">
-                    <a 
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                    <Github size={16} />
-                    Code
-                    </a>
-                  </button>
-                  <button className="btn btn-outline">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                    <ExternalLink size={16} />
-                    Demo
-                    </a>
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Experience Section */}
       <section id="experience" className="section">
         <div className="container">
           <h2 className="section-title">Work Experience</h2>
-          <div className="experience-grid">
-            {experiences.map((exp, index) => (
+          <div className="experience-list">
+            {experiences.map((experience, index) => (
               <div key={index} className="experience-card">
-                <div className="experience-content">
-                  <h3 className="experience-title">{exp.position}</h3>
-                  <p className="experience-details">{exp.duration}</p>
-                  <p className="experience-details">{exp.accounts}</p>
-                  <p className="experience-details">{exp.company}</p>
+                <div className="experience-header">
+                  <h3 className="experience-position">{experience.position}</h3>
+                  <span className="experience-duration">{experience.duration}</span>
                 </div>
+                <h4 className="experience-company">{experience.company}</h4>
+                <p className="experience-accounts">{experience.accounts}</p>
               </div>
             ))}
           </div>
