@@ -131,7 +131,7 @@ const Portfolio = () => {
       {/* Skills Section */}
       <section id="skills" className="section">
         <div className="container">
-          <h2 className="section-title">Skills & Technologies</h2>
+          <h2 className="section-title">Skills & Certifications</h2>
           <div className="card">
             <h3 className="subsection-title">Technical Skills</h3>
             <div className="skills-grid">
