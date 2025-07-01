@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Github, Facebook } from "lucide-react"
+import profilePicture from "../assets/JackyRocha.JPEG"
 import "./Portfolio.css"
 
 const Portfolio = () => {
@@ -55,7 +56,11 @@ const Portfolio = () => {
       <section className="hero">
         <div className="hero-content">
           <div className="avatar">
-            <span>GKP</span>
+            <img
+              src={profilePicture || "/placeholder.svg"}
+              alt="Jacky Rocha"
+              className="avatar-image"
+            />
           </div>
           <h1 className="hero-title">Guian Karlo Pimentel</h1>
           <p className="hero-subtitle">Computer Engineering Student</p>
@@ -149,7 +154,9 @@ const Portfolio = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <Mail size={20} />
-                <span>mgkpimentel@tip.edu.ph</span>
+                <a href="mailto:mgkpimentel@tip.edu.ph">
+                  <span>mgkpimentel@tip.edu.ph</span>
+              </a>
               </div>
               <div className="contact-item">
                 <Phone size={20} />
