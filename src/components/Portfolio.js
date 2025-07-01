@@ -1,5 +1,8 @@
 import { Mail, Phone, MapPin, Github, Facebook } from "lucide-react"
 import profilePicture from "../assets/JackyRocha.JPEG"
+import ccna1Badge from "../assets/ccna/CCNA 1.png"
+import ccna2Badge from "../assets/ccna/CCNA 2.png"
+import ccna3Badge from "../assets/ccna/CCNA 3.png"
 import "./Portfolio.css"
 
 const Portfolio = () => {
@@ -14,6 +17,24 @@ const Portfolio = () => {
     "SQL",
     "C++",
     "Linux",
+  ]
+  
+  const certifications = [
+    {
+      name: "CCNA 1: Introduction to Networks",
+      image: ccna1Badge,
+      alt: "CCNA 1 Certification Badge",
+    },
+    {
+      name: "CCNA 2: Switching, Routing, and Wireless Essentials",
+      image: ccna2Badge,
+      alt: "CCNA 2 Certification Badge",
+    },
+    {
+      name: "CCNA 3: Cybersecurity Essentials",
+      image: ccna3Badge,
+      alt: "CCNA 3 Certification Badge",
+    },
   ]
 
   const experiences = [
@@ -112,11 +133,22 @@ const Portfolio = () => {
         <div className="container">
           <h2 className="section-title">Skills & Technologies</h2>
           <div className="card">
+            <h3 className="subsection-title">Technical Skills</h3>
             <div className="skills-grid">
               {skills.map((skill, index) => (
                 <span key={index} className="skill-badge">
                   {skill}
                 </span>
+              ))}
+            </div>
+
+            <h3 className="subsection-title">Certifications</h3>
+            <div className="certifications-grid">
+              {certifications.map((cert, index) => (
+                <div key={index} className="certification-item">
+                  <img src={cert.image || "/placeholder.svg"} alt={cert.alt} className="certification-badge" />
+                  <p className="certification-name">{cert.name}</p>
+                </div>
               ))}
             </div>
           </div>
